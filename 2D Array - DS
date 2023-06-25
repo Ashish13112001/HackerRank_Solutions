@@ -1,0 +1,13 @@
+int hourglassSum(vector<vector<int>> arr) {
+    int sum=0, max=INT_MIN;
+for(int row=0; row<arr.size()-2; row++){
+    for(int column=0; column<arr.size()-2; column++){
+        sum=arr[row][column]+arr[row][column+1]+arr[row][column+2]
+                            +arr[row+1][column+1]
+            +arr[row+2][column]+arr[row+2][column+1]+arr[row+2][column+2];
+        if(max<sum)
+        max=sum;
+    }
+}
+return max;
+}
