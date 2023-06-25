@@ -1,0 +1,15 @@
+vector<int> matchingStrings(vector<string> stringList, vector<string> queries) {
+    vector<int> ans;
+    
+for(int i=0;i<queries.size();i++){
+    int count=0;
+    for(int j=0;j<stringList.size();j++){
+        if(queries[i] == stringList[j])
+        {
+            count++;
+        }
+    }
+    ans.push_back(count);
+}
+return ans;
+}
