@@ -13,9 +13,42 @@ int superDigit(string n, int k) {
         {
             int rem = sum%10;
             newSum +=rem;
-            sum/=10;
+            sum/=10; 
         }
         sum = newSum;
     }
     return sum;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+We can also solve this problem in the single loop.
+
+int superDigit(string n, int k) {
+    int sum=0;
+    for(int i=0; i<n.length(); i++)
+    {
+        int x=n[i]-'0';
+         sum+=x;
+    }
+    sum*=k;
+    
+    int num=0;
+    while(1)
+    {
+        int rem=sum%10;
+            num+=rem;
+            sum/=10;
+            if(sum==0)
+            {
+                sum=num;
+                num=0;
+                if(sum<=9)
+                return sum;
+            }
+        
+    }
+
 }
