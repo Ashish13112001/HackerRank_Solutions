@@ -27,7 +27,7 @@ int superDigit(string n, int k) {
 We can also solve this problem in the single loop.
 
 int superDigit(string n, int k) {
-    int sum=0;
+    long int sum=0;
     for(int i=0; i<n.length(); i++)
     {
         int x=n[i]-'0';
