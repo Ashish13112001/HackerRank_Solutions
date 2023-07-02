@@ -1,0 +1,17 @@
+int lonelyinteger(vector<int> a) {
+    int size = a.size();
+    sort(a.begin(),a.end());
+    if(size == 1)
+    return a[0];
+    else
+    {
+    for(int i=0;i<size;i=i+2)
+    {
+        if(i == size-1)
+        return a[i];
+        else if(a[i]!=a[i+1])
+        return a[i];
+    }
+    }
+    return -1;
+}
